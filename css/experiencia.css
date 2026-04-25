@@ -93,9 +93,18 @@
   }
   .experiencia .subtitulo {
     color: #141414;
+    font-size: 2rem;
+    line-height: 1;
+    max-width: 100%;
+    text-align: left;
   }
   .experiencia-texto {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
+    line-height: 1.4;
+    max-width: 100%;
+  }
+  .empresa {
+    grid-template-columns: 1fr;
   }
   .empresa-ano {
     position: initial;
@@ -103,14 +112,5 @@
     width: initial;
     text-align: left;
     max-width: none;
-  }
-}
-
-@media (max-width: 800px) {
-  .empresa {
-    grid-template-columns: 1fr;
-  }
-  .experiencia .subtitulo {
-    font-size: 3rem;
   }
 }

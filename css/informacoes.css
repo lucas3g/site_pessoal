@@ -132,6 +132,7 @@
   .informacoes .subtitulo {
     color: #ffffff;
     font-size: 2rem;
+    max-width: 100%;
     margin-bottom: 20px;
   }
 

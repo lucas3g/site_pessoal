@@ -36,6 +36,24 @@
   color: #525252;
 }
 
+.k {
+  position: relative;
+  display: inline-block;
+}
+
+.k::after {
+  content: "";
+  position: absolute;
+  width: 12em;
+  height: 0.5em;
+  background: url("../img/detalhe-k.svg") no-repeat center;
+  background-size: contain;
+  top: 32%;
+  left: -25%;
+  transform: translate(-45%, -15%) rotate(-1deg);
+  pointer-events: none;
+}
+
 @media (max-width: 1000px) {
   .introducao h1 {
     font-size: 3rem;
@@ -64,54 +82,22 @@
     top: -8px;
     background-size: contain;
   }
-}
-
-@media (max-width: 400px) {
-  .introducao {
-    grid-template-columns: 1fr;
-  }
   .introducao img {
     display: none;
   }
 }
 
-.k {
-  position: relative;
-  display: inline-block;
+@media (max-width: 480px) {
+  .introducao {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+    justify-items: center;
+  }
+  .introducao h1 {
+    font-size: 2.5rem;
+  }
+  .introducao p {
+    font-size: 1.125rem;
+  }
 }
-
-.k {
-  position: relative;
-  display: inline-block;
-}
-
-.k::after {
-  content: "";
-  position: absolute;
-
-  width: 12em;
-  height: 0.5em;
-
-  background: url("../img/detalhe-k.svg") no-repeat center;
-  background-size: contain;
-
-  top: 32%;
-  left: -25%;
-
-  transform: translate(-45%, -15%) rotate(-1deg);
-  pointer-events: none;
-}
-
-/* .k::after {
-  content: "";
-  position: absolute;
-
-  width: 0.7em;
-  height: 0.5em;
-
-  background: url("../img/detalhe-k.svg") no-repeat center;
-  background-size: contain;
-
-  top: 0.27em;
-  left: 0.1em;
-} */
