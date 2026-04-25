@@ -1,0 +1,154 @@
+.informacoes {
+  background: #141414;
+  color: #ffffff;
+  position: relative;
+}
+
+.informacoes .subtitulo {
+  color: #000000;
+  line-height: auto;
+  text-transform: uppercase;
+}
+
+.informacoes-container {
+  max-width: 1200px;
+  padding: 20px 40px 20px 40px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+}
+
+.informacoes-container::after {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 100px;
+  background: url(../img/detalhe.svg) no-repeat center center;
+  background-size: contain;
+  position: absolute;
+  bottom: -50px;
+  left: 20px;
+  z-index: 1;
+}
+
+.cursos {
+  margin-bottom: 60px;
+}
+
+.formacao h3 {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: #8f8f8f;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.formacao h3::before {
+  display: block;
+  content: "";
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: -36px;
+  top: -4px;
+}
+
+.cursos h3::before {
+  background: url(../img/cursos.svg) no-repeat center center;
+}
+
+.habilidades h3::before {
+  background: url(../img/habilidades.svg) no-repeat center center;
+}
+
+.idiomas h3::before {
+  background: url(../img/idiomas.svg) no-repeat center center;
+}
+
+.idiomas {
+  margin-top: 60px;
+}
+
+.formacao li {
+  font-size: 1.125rem;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.formacao span {
+  color: #8f8f8f;
+}
+
+.cursos li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cursos .plataforma {
+  margin-left: 8px;
+}
+
+.cursos li > span:first-child {
+  color: #ffffff;
+}
+
+.habilidades li {
+  font-size: 1.125rem;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.habilidades li > span:first-child {
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+@media (max-width: 800px) {
+  .informacoes-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 20px;
+  }
+
+  .cursos li {
+    flex-wrap: wrap;
+  }
+
+  .habilidades li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .habilidades li > span:first-child {
+    margin-bottom: 4px;
+  }
+
+  .informacoes .subtitulo {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .formacao h3 {
+    padding-left: 30px;
+  }
+
+  .formacao h3::before {
+    left: 0;
+  }
+
+  .formacao li {
+    font-size: 1rem;
+  }
+  .informacoes-container::after {
+    width: 70px;
+    height: 50px;
+    bottom: -25px;
+  }
+}
