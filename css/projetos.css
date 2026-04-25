@@ -102,3 +102,32 @@
   transform: scale(1.03);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
+
+@keyframes flutuar-1 {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes flutuar-2 {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-18px);
+  }
+}
+
+.flutuante-1 {
+  animation: flutuar-1 5s ease-in-out infinite;
+}
+
+.flutuante-2 {
+  animation: flutuar-2 6.5s ease-in-out infinite;
+  animation-delay: -1.8s;
+}

@@ -100,4 +100,7 @@
   .introducao p {
     font-size: 1.125rem;
   }
+  .k::after {
+    display: none;
+  }
 }
