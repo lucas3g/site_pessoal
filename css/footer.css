@@ -31,6 +31,7 @@
 
 .footer-contato li {
   margin: 0;
+  color: #ffffff;
 }
 
 .footer-contato li a {
@@ -54,7 +55,7 @@
 .footer-contato li a svg {
   width: 26px;
   height: 26px;
-  fill: #ffffff;
+  fill: url(#grad-icon);
 }
 
 .footer-copy {
