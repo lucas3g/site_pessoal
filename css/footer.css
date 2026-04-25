@@ -67,12 +67,20 @@
 @media (max-width: 800px) {
   .footer-container {
     grid-template-columns: 1fr;
-    gap: 40px;
-    text-align: center;
+    gap: 24px;
     padding: 60px 20px;
+    text-align: center;
+  }
+
+  .footer-contato {
+    align-items: center;
+  }
+
+  .footer-icons {
+    justify-content: center;
   }
 
   .footer-contato li {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }
