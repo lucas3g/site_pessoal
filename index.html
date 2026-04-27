@@ -7,6 +7,7 @@
   <title>Maktub - Desenvolvendo Soluções</title>
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/animations.css">
+  <link rel="stylesheet" href="./css/back-to-top.css">
 </head>
 
 <body>
@@ -152,6 +153,18 @@
     </div>
   </footer>
   <script src="./js/scroll-animations.js"></script>
+  <script src="./js/back-to-top.js"></script>
+  <button id="backToTopBtn" class="back-to-top-btn" type="button" aria-label="Voltar ao topo">
+    <svg viewBox="0 0 512 512" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="backToTopGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.92" />
+          <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.72" />
+        </linearGradient>
+      </defs>
+      <path fill="url(#backToTopGradient)" d="M256 50.7c-113.6 0-205.7 92.1-205.7 205.7S142.4 462.1 256 462.1 461.7 369.9 461.7 256 369.6 50.7 256 50.7zm75.7 216.8l-55.7-55.7V331c0 13.3-10.7 24-24 24s-24-10.7-24-24V211.8l-55.7 55.7c-9.4 9.4-24.6 9.4-34 0-9.4-9.4-9.4-24.6 0-34l96-96c9.4-9.4 24.6-9.4 34 0l96 96c9.4 9.4 9.4 24.6 0 34-9.4 9.4-24.6 9.4-34 0z" />
+    </svg>
+  </button>
 </body>
 
 </html>

@@ -11,10 +11,13 @@
   align-items: center;
   justify-content: center;
   padding: 0;
-  background: linear-gradient(135deg, #2DA1FF 0%, #0C204D 100%);
+  background: linear-gradient(135deg, #2da1ff 0%, #0c204d 100%);
   color: #ffffff;
   box-shadow: 0 20px 35px rgba(12, 32, 77, 0.24);
-  transition: opacity 0.28s ease, transform 0.28s ease, box-shadow 0.28s ease;
+  transition:
+    opacity 0.28s ease,
+    transform 0.28s ease,
+    box-shadow 0.28s ease;
   opacity: 0;
   transform: translateY(20px) scale(0.95);
   pointer-events: none;
@@ -40,11 +43,15 @@
 }
 
 .back-to-top-btn::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.35), transparent 45%);
+  background: radial-gradient(
+    circle at top left,
+    rgba(255, 255, 255, 0.35),
+    transparent 45%
+  );
   opacity: 0;
   transition: opacity 0.28s ease;
 }
