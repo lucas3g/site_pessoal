@@ -43,6 +43,8 @@
   line-height: 1.4;
   font-size: 1.125rem;
   position: relative;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .lista {

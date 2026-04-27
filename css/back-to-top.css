@@ -1,0 +1,64 @@
+.back-to-top-btn {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: linear-gradient(135deg, #2DA1FF 0%, #0C204D 100%);
+  color: #ffffff;
+  box-shadow: 0 20px 35px rgba(12, 32, 77, 0.24);
+  transition: opacity 0.28s ease, transform 0.28s ease, box-shadow 0.28s ease;
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  pointer-events: none;
+  z-index: 50;
+}
+
+.back-to-top-btn.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.back-to-top-btn:hover,
+.back-to-top-btn:focus-visible {
+  transform: translateY(0) scale(1.08);
+  box-shadow: 0 22px 45px rgba(12, 32, 77, 0.32);
+  outline: none;
+}
+
+.back-to-top-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+.back-to-top-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.35), transparent 45%);
+  opacity: 0;
+  transition: opacity 0.28s ease;
+}
+
+.back-to-top-btn:hover::after,
+.back-to-top-btn:focus-visible::after {
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .back-to-top-btn {
+    right: 0.85rem;
+    bottom: 0.85rem;
+    width: 48px;
+    height: 48px;
+  }
+}
