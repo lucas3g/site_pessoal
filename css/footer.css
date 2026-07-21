@@ -58,10 +58,48 @@
   fill: url(#grad-icon);
 }
 
-.footer-copy {
+.footer-legal {
   grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.footer-copy {
   font-size: 1.125rem;
   color: #8f8f8f;
+}
+
+.footer-privacidade {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-size: 1rem;
+  line-height: 1;
+  color: #ffffff;
+  text-decoration: none;
+  background: linear-gradient(135deg, #2da1ff 0%, #0c204d 100%);
+  box-shadow: 0 12px 25px rgba(12, 32, 77, 0.24);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.footer-privacidade:hover,
+.footer-privacidade:focus-visible {
+  transform: scale(1.05);
+  box-shadow: 0 16px 35px rgba(45, 161, 255, 0.35);
+  outline: none;
+}
+
+.footer-privacidade svg {
+  width: 20px;
+  height: 20px;
+  fill: #ffffff;
 }
 
 @media (max-width: 800px) {
@@ -86,8 +124,12 @@
   .footer-texto {
     font-size: 1.1rem;
   }
+  .footer-legal {
+    flex-direction: column;
+    gap: 20px;
+  }
   .footer-copy {
-    padding: 40px;
+    padding: 20px 0 0;
     font-size: 1rem;
   }
 }
