@@ -21,8 +21,8 @@
     0 4px 0 var(--escuro),
     0 10px 0 rgba(0, 0, 0, 0.45);
   transition:
-    opacity 0.2s steps(4),
-    transform 0.2s steps(4);
+    opacity 0.2s ease,
+    transform 0.2s ease;
   opacity: 0;
   transform: translateY(24px);
   pointer-events: none;

@@ -329,11 +329,11 @@ button:focus-visible {
 }
 
 .flutuante-1 {
-  animation: flutuar 2.4s steps(4) infinite alternate;
+  animation: flutuar 3s ease-in-out infinite alternate;
 }
 
 .flutuante-2 {
-  animation: flutuar 2.4s steps(4) -1.2s infinite alternate;
+  animation: flutuar 3s ease-in-out -1.5s infinite alternate;
 }
 
 @media (max-width: 800px) {
