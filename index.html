@@ -28,7 +28,7 @@
     </defs>
   </svg>
 
-  <div class="abertura" id="topo">
+  <div class="abertura" id="topo" data-pausar>
     <div class="estrelas estrelas-1" aria-hidden="true"></div>
     <div class="estrelas estrelas-2" aria-hidden="true"></div>
     <div class="estrelas estrelas-3" aria-hidden="true"></div>
@@ -111,7 +111,8 @@
         <path fill="#b9c7ea" d="M3 3h2v2h-2zM6 5h2v1h-2zM5 7h1v1h-1z" />
       </svg>
 
-      <svg class="pixel cena-camada cena-montanhas" aria-hidden="true">
+      <div class="cena-camada cena-montanhas" aria-hidden="true">
+      <svg class="pixel">
         <defs>
           <pattern id="padrao-montanhas" width="640" height="160" patternUnits="userSpaceOnUse">
             <g transform="scale(8)">
@@ -122,8 +123,10 @@
         </defs>
         <rect width="100%" height="100%" fill="url(#padrao-montanhas)" />
       </svg>
+      </div>
 
-      <svg class="pixel cena-camada cena-cidade" aria-hidden="true">
+      <div class="cena-camada cena-cidade" aria-hidden="true">
+      <svg class="pixel">
         <defs>
           <pattern id="padrao-cidade" width="384" height="144" patternUnits="userSpaceOnUse">
             <g transform="scale(6)">
@@ -135,8 +138,10 @@
         </defs>
         <rect width="100%" height="100%" fill="url(#padrao-cidade)" />
       </svg>
+      </div>
 
-      <svg class="pixel cena-camada cena-chao" aria-hidden="true">
+      <div class="cena-camada cena-chao" aria-hidden="true">
+      <svg class="pixel">
         <defs>
           <pattern id="padrao-chao" width="128" height="48" patternUnits="userSpaceOnUse">
             <g transform="scale(8)">
@@ -149,6 +154,7 @@
         </defs>
         <rect width="100%" height="100%" fill="url(#padrao-chao)" />
       </svg>
+      </div>
 
       <div class="cena-moeda" aria-hidden="true">
         <div class="cena-moeda-some">
@@ -180,7 +186,7 @@
     </div>
   </div>
 
-  <div class="letreiro" aria-hidden="true">
+  <div class="letreiro" data-pausar aria-hidden="true">
     <div class="letreiro-trilho">
       <ul>
         <li>DART</li><li>JAVA</li><li>KOTLIN</li><li>TYPESCRIPT</li><li>SQL</li><li>PHP</li><li>FLUTTER</li><li>SPRING BOOT</li><li>NESTJS</li><li>POSTGRESQL</li><li>MONGODB</li><li>FIREBASE</li>
@@ -449,7 +455,7 @@
     </div>
   </section>
 
-  <footer class="footer" id="contato">
+  <footer class="footer" id="contato" data-pausar>
     <div class="estrelas footer-estrelas" aria-hidden="true"></div>
     <div class="footer-container">
       <div class="footer-caixa-area animar animar-zoom">
@@ -487,6 +493,7 @@
   <script src="./js/back-to-top.js"></script>
   <script src="./js/digitacao.js"></script>
   <script src="./js/moedas.js"></script>
+  <script src="./js/cena.js"></script>
 </body>
 
 </html>

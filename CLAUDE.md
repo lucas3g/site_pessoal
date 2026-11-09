@@ -36,6 +36,7 @@ Scripts independentes, sem dependências:
 - `js/back-to-top.js` — controla a visibilidade do botão `#backToTopBtn` (aparece após 300px de scroll) e o scroll suave ao topo.
 - `js/digitacao.js` — efeito de digitação em `#digitacao`; a lista de termos fica no próprio arquivo.
 - `js/moedas.js` — placar da abertura (`#moedaBtn` soma em `#moedasTotal`).
+- `js/cena.js` — pausa as animações contínuas das áreas marcadas com `data-pausar` (abertura, letreiro, footer) enquanto estão fora da tela, colocando a classe `fora-da-tela`.
 
 As animações contínuas (parallax, personagem, moedas, estrelas, letreiro) são só CSS, com `@keyframes` em `css/pixel/animations.css`. Tudo respeita `prefers-reduced-motion`.
 

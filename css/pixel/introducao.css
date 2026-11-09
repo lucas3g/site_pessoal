@@ -58,7 +58,7 @@
   box-shadow:
     12px -4px 0 #7cc4ff,
     24px -8px 0 #2da1ff;
-  animation: cadente 9s steps(24) infinite;
+  animation: cadente 9s linear infinite;
 }
 
 /* texto + ficha */
@@ -185,12 +185,18 @@
   position: absolute;
   right: 24%;
   top: 8px;
-  animation: balancar 4s steps(4) infinite alternate;
+  animation: balancar 4s ease-in-out infinite alternate;
 }
 
 .cena-camada {
   position: absolute;
   left: 0;
+  will-change: transform;
+}
+
+.cena-camada svg {
+  width: 100%;
+  height: 100%;
 }
 
 .cena-montanhas {
@@ -212,10 +218,6 @@
   width: calc(100% + 128px);
   height: 48px;
   animation: rolar-128 1.6s linear infinite;
-}
-
-.cena-janelas {
-  animation: piscar 2.6s steps(1) infinite;
 }
 
 .cena-moeda {
@@ -280,7 +282,7 @@
   border: 0;
   padding: 8px;
   cursor: pointer;
-  animation: balancar 1.6s steps(4) infinite alternate;
+  animation: balancar 1.6s ease-in-out infinite alternate;
 }
 
 .placar-moeda.quique-a {
@@ -289,6 +291,12 @@
 
 .placar-moeda.quique-b {
   animation: quique-b 0.36s steps(6);
+}
+
+/* js/cena.js pausa as animações quando a área sai da tela */
+.fora-da-tela,
+.fora-da-tela * {
+  animation-play-state: paused !important;
 }
 
 /* letreiro de tecnologias */
