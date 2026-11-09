@@ -1,0 +1,352 @@
+.abertura {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 400px;
+  background: linear-gradient(
+    #070b1f 0 34%,
+    #0a1130 34% 58%,
+    #0e1840 58% 78%,
+    #132255 78% 100%
+  );
+}
+
+/* estrelas: um ponto de 4px replicado com box-shadow */
+.estrelas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  background: transparent;
+}
+
+.estrelas-1 {
+  box-shadow:
+    6vw 60px 0 #fff, 14vw 180px 0 #fff, 23vw 90px 0 #fff, 31vw 240px 0 #fff,
+    38vw 50px 0 #fff, 47vw 150px 0 #fff, 55vw 80px 0 #fff, 63vw 210px 0 #fff,
+    72vw 120px 0 #fff, 81vw 260px 0 #fff, 88vw 170px 0 #fff, 95vw 70px 0 #fff,
+    9vw 420px 0 #fff, 44vw 460px 0 #fff, 78vw 430px 0 #fff;
+  animation: cintilar 2.4s steps(1) infinite;
+}
+
+.estrelas-2 {
+  box-shadow:
+    3vw 220px 0 #7cc4ff, 10vw 110px 0 #7cc4ff, 19vw 280px 0 #7cc4ff,
+    27vw 30px 0 #7cc4ff, 35vw 160px 0 #7cc4ff, 43vw 300px 0 #7cc4ff,
+    51vw 230px 0 #7cc4ff, 59vw 40px 0 #7cc4ff, 67vw 290px 0 #7cc4ff,
+    76vw 200px 0 #7cc4ff, 85vw 100px 0 #7cc4ff, 92vw 310px 0 #7cc4ff,
+    25vw 480px 0 #7cc4ff, 60vw 500px 0 #7cc4ff;
+  animation: cintilar 3.2s steps(1) -1.1s infinite;
+}
+
+.estrelas-3 {
+  box-shadow:
+    8vw 320px 0 #ffd23f, 17vw 20px 0 #ffd23f, 29vw 140px 0 #ffd23f,
+    41vw 100px 0 #ffd23f, 53vw 330px 0 #ffd23f, 61vw 130px 0 #ffd23f,
+    70vw 30px 0 #ffd23f, 79vw 60px 0 #ffd23f, 90vw 240px 0 #ffd23f,
+    97vw 190px 0 #ffd23f;
+  animation: cintilar 1.8s steps(1) -0.6s infinite;
+}
+
+.cadente {
+  position: absolute;
+  top: 60px;
+  right: 18%;
+  width: 28px;
+  height: 4px;
+  background: #fff;
+  box-shadow:
+    12px -4px 0 #7cc4ff,
+    24px -8px 0 #2da1ff;
+  animation: cadente 9s steps(24) infinite;
+}
+
+/* texto + ficha */
+.introducao {
+  position: relative;
+  z-index: 2;
+  max-width: 1208px;
+  margin: 0 auto;
+  padding: 72px 24px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 56px 48px;
+}
+
+.introducao-texto {
+  flex: 1 1 520px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.introducao h1 {
+  font-family: var(--fonte-pixel);
+  font-weight: 400;
+  font-size: clamp(20px, 4.4vw, 46px);
+  line-height: 1.45;
+  color: var(--texto);
+  text-shadow: 4px 4px 0 #1670c4;
+}
+
+.introducao-cargo {
+  font-family: var(--fonte-pixel);
+  font-size: clamp(11px, 1.5vw, 15px);
+  line-height: 1.7;
+  color: var(--linha-clara);
+}
+
+.introducao-resumo {
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--texto-2);
+}
+
+.digitacao {
+  min-height: 28px;
+  font-family: var(--fonte-pixel);
+  font-size: 13px;
+  line-height: 28px;
+  color: var(--linha-clara);
+}
+
+.digitacao .cursor {
+  color: var(--ouro);
+}
+
+.ficha-area {
+  flex: 0 1 328px;
+  min-width: 0;
+}
+
+.ficha {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ficha-topo,
+.ficha-linha {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.ficha-topo,
+.ficha-chave {
+  font-family: var(--fonte-pixel);
+  font-size: 12px;
+}
+
+.ficha-topo span:first-child {
+  color: var(--ouro);
+}
+
+.ficha-chave {
+  color: var(--linha-clara);
+}
+
+.ficha-valor {
+  font-size: 16px;
+  text-align: right;
+}
+
+.foto-perfil {
+  width: 100%;
+  aspect-ratio: 674 / 862;
+  object-fit: cover;
+  background: var(--escuro);
+  box-shadow: 0 0 0 4px var(--escuro);
+}
+
+.ficha-dados {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 4px;
+}
+
+/* cena em parallax no rodapé da abertura */
+.cena {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 360px;
+  overflow: hidden;
+}
+
+.cena-lua {
+  position: absolute;
+  right: 24%;
+  top: 8px;
+  animation: balancar 4s steps(4) infinite alternate;
+}
+
+.cena-camada {
+  position: absolute;
+  left: 0;
+}
+
+.cena-montanhas {
+  bottom: 48px;
+  width: calc(100% + 640px);
+  height: 160px;
+  animation: rolar-640 64s linear infinite;
+}
+
+.cena-cidade {
+  bottom: 48px;
+  width: calc(100% + 384px);
+  height: 144px;
+  animation: rolar-384 16s linear infinite;
+}
+
+.cena-chao {
+  bottom: 0;
+  width: calc(100% + 128px);
+  height: 48px;
+  animation: rolar-128 1.6s linear infinite;
+}
+
+.cena-janelas {
+  animation: piscar 2.6s steps(1) infinite;
+}
+
+.cena-moeda {
+  position: absolute;
+  left: 0;
+  bottom: 152px;
+  width: 40px;
+  height: 40px;
+  transform: translateX(600px);
+  animation: correr 13s linear infinite;
+}
+
+.cena-moeda-some {
+  animation: sumir 13s steps(1) infinite;
+}
+
+.cena-mais {
+  position: absolute;
+  left: 76px;
+  bottom: 200px;
+  font-family: var(--fonte-pixel);
+  font-size: 12px;
+  color: var(--ouro);
+  opacity: 0;
+  animation: mais-um 13s linear infinite;
+}
+
+.cena-personagem {
+  position: absolute;
+  left: 64px;
+  bottom: 48px;
+  width: 60px;
+  height: 80px;
+  animation: pular 13s linear infinite;
+}
+
+.cena-personagem-quadro {
+  width: 60px;
+  height: 80px;
+  overflow: hidden;
+}
+
+.cena-personagem-quadro svg {
+  animation: andar 0.42s steps(2) infinite;
+}
+
+.placar {
+  position: absolute;
+  right: 24px;
+  bottom: 236px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--fonte-pixel);
+  font-size: 11px;
+  color: var(--texto);
+  text-shadow: 2px 2px 0 var(--escuro);
+}
+
+.placar-moeda {
+  background: transparent;
+  border: 0;
+  padding: 8px;
+  cursor: pointer;
+  animation: balancar 1.6s steps(4) infinite alternate;
+}
+
+.placar-moeda.quique-a {
+  animation: quique-a 0.36s steps(6);
+}
+
+.placar-moeda.quique-b {
+  animation: quique-b 0.36s steps(6);
+}
+
+/* letreiro de tecnologias */
+.letreiro {
+  overflow: hidden;
+  background: var(--ouro);
+  border-top: 4px solid var(--escuro);
+  border-bottom: 4px solid var(--escuro);
+}
+
+.letreiro-trilho {
+  display: flex;
+  width: max-content;
+  animation: letreiro 36s linear infinite;
+}
+
+.letreiro:hover .letreiro-trilho {
+  animation-play-state: paused;
+}
+
+.letreiro ul {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.letreiro li {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 16px 0 16px 28px;
+  font-family: var(--fonte-pixel);
+  font-size: 12px;
+  line-height: 1;
+  color: var(--fundo);
+  white-space: nowrap;
+}
+
+.letreiro li::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: var(--fundo);
+}
+
+@media (max-width: 800px) {
+  .introducao {
+    padding: 48px 16px 0;
+  }
+
+  .introducao-resumo {
+    font-size: 17px;
+  }
+
+  .cena-lua {
+    display: none;
+  }
+
+  .placar {
+    right: 12px;
+  }
+}

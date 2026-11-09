@@ -1,0 +1,75 @@
+.informacoes {
+  background: var(--fundo);
+}
+
+.formacao {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 44px;
+  align-items: flex-start;
+}
+
+.formacao-coluna {
+  flex: 1 1 340px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.formacao-habilidades {
+  flex: 2 1 480px;
+  min-width: 0;
+}
+
+.cursos,
+.idiomas,
+.habilidades {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formacao-topo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.habilidades-chave {
+  flex: 0 0 220px;
+  font-weight: 600;
+  color: var(--linha-clara);
+}
+
+.habilidades-valor {
+  flex: 1 1 240px;
+}
+
+.coracoes {
+  display: flex;
+  gap: 6px;
+}
+
+.coracao {
+  width: 21px;
+  height: 18px;
+  fill: var(--divisor);
+}
+
+.coracao.cheio {
+  fill: var(--ouro);
+}
+
+@media (max-width: 480px) {
+  .cursos,
+  .idiomas,
+  .habilidades {
+    padding: 20px;
+  }
+
+  .habilidades-chave {
+    flex-basis: 100%;
+  }
+}

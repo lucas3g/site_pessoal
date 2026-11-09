@@ -1,0 +1,164 @@
+.experiencia {
+  background: var(--fundo);
+}
+
+.experiencia-grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr));
+  gap: 48px 44px;
+  align-items: start;
+}
+
+/* caixa de diálogo */
+.dialogo {
+  position: relative;
+  padding: 28px 28px 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dialogo-topo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.dialogo-avatar {
+  background: var(--fundo);
+  padding: 8px;
+  box-shadow: 0 0 0 4px var(--linha);
+}
+
+.dialogo-nome {
+  font-family: var(--fonte-pixel);
+  font-size: 12px;
+  color: var(--ouro);
+}
+
+.experiencia-texto {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.dialogo-seta {
+  position: absolute;
+  right: 24px;
+  bottom: 18px;
+}
+
+/* missão (empresa) */
+.empresa {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.empresa-topo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.empresa-missao {
+  font-family: var(--fonte-pixel);
+  font-size: 12px;
+  color: var(--ouro);
+}
+
+.empresa-titulo {
+  font-family: var(--fonte-pixel);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.empresa-cargo {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--linha-clara);
+}
+
+.empresa-feitos {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--texto-2);
+}
+
+.empresa-feitos li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.empresa-feitos li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 8px;
+  height: 8px;
+  background: var(--ouro);
+}
+
+.empresa-habilidades {
+  padding-top: 8px;
+}
+
+/* como atuo no dia a dia */
+.atuacao {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-top: 24px;
+}
+
+.atuacao-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  gap: 40px 36px;
+}
+
+.atuacao-item {
+  height: calc(100% - 8px);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.atuacao-numero {
+  font-family: var(--fonte-pixel);
+  font-size: 12px;
+  color: var(--linha);
+}
+
+.caixa-dourada .atuacao-numero {
+  color: var(--ouro);
+}
+
+.atuacao-item h3 {
+  font-family: var(--fonte-pixel);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.atuacao-item p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--texto-2);
+}
+
+@media (max-width: 480px) {
+  .dialogo,
+  .empresa {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
