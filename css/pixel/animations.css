@@ -1,0 +1,169 @@
+/* revelação ao rolar (js/scroll-animations.js adiciona .visivel) */
+.animar,
+.animar-esquerda,
+.animar-direita,
+.animar-zoom {
+  opacity: 0;
+  transition:
+    opacity 0.5s steps(5),
+    transform 0.5s steps(5);
+}
+
+.animar {
+  transform: translateY(40px);
+}
+
+.animar-esquerda {
+  transform: translateX(-56px);
+}
+
+.animar-direita {
+  transform: translateX(56px);
+}
+
+.animar-zoom {
+  transform: scale(0.84);
+}
+
+.animar.visivel,
+.animar-esquerda.visivel,
+.animar-direita.visivel,
+.animar-zoom.visivel {
+  opacity: 1;
+  transform: none;
+}
+
+.animar:nth-child(2) {
+  transition-delay: 0.12s;
+}
+
+.animar:nth-child(3) {
+  transition-delay: 0.24s;
+}
+
+.animar:nth-child(4) {
+  transition-delay: 0.36s;
+}
+
+.animar:nth-child(5) {
+  transition-delay: 0.48s;
+}
+
+.animar:nth-child(6) {
+  transition-delay: 0.6s;
+}
+
+@keyframes cintilar {
+  0% { opacity: 1; }
+  40% { opacity: 0.25; }
+  60% { opacity: 0.7; }
+  80% { opacity: 0.1; }
+}
+
+@keyframes piscar {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes cadente {
+  0%, 86% { opacity: 0; transform: translate(0, 0); }
+  87% { opacity: 1; transform: translate(0, 0); }
+  97% { opacity: 1; transform: translate(-360px, 180px); }
+  98%, 100% { opacity: 0; transform: translate(-360px, 180px); }
+}
+
+@keyframes balancar {
+  from { transform: translateY(0); }
+  to { transform: translateY(-8px); }
+}
+
+@keyframes flutuar {
+  from { transform: translateY(0); }
+  to { transform: translateY(-12px); }
+}
+
+@keyframes rolar-640 {
+  to { transform: translateX(-640px); }
+}
+
+@keyframes rolar-384 {
+  to { transform: translateX(-384px); }
+}
+
+@keyframes rolar-128 {
+  to { transform: translateX(-128px); }
+}
+
+@keyframes andar {
+  to { transform: translateX(-120px); }
+}
+
+/* pulo, moeda e "+1" compartilham os 13s para ficarem sincronizados */
+@keyframes pular {
+  0%, 80% { transform: translateY(0); }
+  82% { transform: translateY(-44px); }
+  84.6% { transform: translateY(-64px); }
+  87% { transform: translateY(-44px); }
+  89.5%, 100% { transform: translateY(0); }
+}
+
+@keyframes correr {
+  from { transform: translateX(960px); }
+  to { transform: translateX(-80px); }
+}
+
+@keyframes sumir {
+  0% { opacity: 1; }
+  84.6% { opacity: 0; }
+}
+
+@keyframes mais-um {
+  0%, 84.5% { opacity: 0; transform: translateY(0); }
+  84.6% { opacity: 1; transform: translateY(0); }
+  92% { opacity: 1; transform: translateY(-40px); }
+  93%, 100% { opacity: 0; transform: translateY(-40px); }
+}
+
+@keyframes girar {
+  0% { transform: scaleX(1); }
+  25% { transform: scaleX(0.55); }
+  50% { transform: scaleX(0.12); }
+  75% { transform: scaleX(0.55); }
+}
+
+@keyframes letreiro {
+  to { transform: translateX(-50%); }
+}
+
+@keyframes quique-a {
+  0% { transform: translateY(0) scale(1); }
+  35% { transform: translateY(-28px) scale(1.25); }
+  100% { transform: translateY(0) scale(1); }
+}
+
+@keyframes quique-b {
+  0% { transform: translateY(0) scale(1); }
+  35% { transform: translateY(-28px) scale(1.25); }
+  100% { transform: translateY(0) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animar,
+  .animar-esquerda,
+  .animar-direita,
+  .animar-zoom {
+    opacity: 1;
+    transform: none;
+  }
+}

@@ -1,0 +1,56 @@
+.back-to-top-btn {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 52px;
+  height: 52px;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--fundo);
+  background: var(--ouro);
+  box-shadow:
+    inset -4px -4px 0 #c98a00,
+    inset 4px 4px 0 #ffe98a,
+    -4px 0 0 var(--escuro),
+    4px 0 0 var(--escuro),
+    0 -4px 0 var(--escuro),
+    0 4px 0 var(--escuro),
+    0 10px 0 rgba(0, 0, 0, 0.45);
+  transition:
+    opacity 0.2s steps(4),
+    transform 0.2s steps(4);
+  opacity: 0;
+  transform: translateY(24px);
+  pointer-events: none;
+  z-index: 50;
+}
+
+.back-to-top-btn.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.back-to-top-btn:hover,
+.back-to-top-btn:focus-visible {
+  transform: translateY(-4px);
+}
+
+.back-to-top-btn svg {
+  width: 21px;
+  height: 24px;
+  fill: currentColor;
+}
+
+@media (max-width: 600px) {
+  .back-to-top-btn {
+    right: 16px;
+    bottom: 16px;
+    width: 48px;
+    height: 48px;
+  }
+}

@@ -1,0 +1,122 @@
+.header {
+  position: relative;
+  z-index: 2;
+  max-width: 1208px;
+  margin: 0 auto;
+  padding: 28px 24px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 24px;
+}
+
+.marca {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 44px;
+  text-decoration: none;
+  color: var(--texto);
+}
+
+.marca:hover {
+  color: var(--texto);
+}
+
+.marca-nome {
+  font-family: var(--fonte-pixel);
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.header-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+}
+
+.menu-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 14px;
+  font-family: var(--fonte-pixel);
+  font-size: 11px;
+  color: var(--texto);
+  text-decoration: none;
+}
+
+.menu-link::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  color: var(--ouro);
+  opacity: 0;
+  transform: translateX(-6px);
+  transition:
+    opacity 0.12s steps(2),
+    transform 0.12s steps(2);
+}
+
+.menu-link:hover {
+  color: var(--ouro);
+}
+
+.menu-link:hover::before {
+  opacity: 1;
+  transform: none;
+}
+
+.idioma {
+  display: flex;
+  gap: 8px;
+}
+
+.idioma-btn {
+  font-family: var(--fonte-pixel);
+  font-size: 11px;
+  line-height: 1;
+  min-width: 56px;
+  min-height: 44px;
+  margin: 4px;
+  padding: 0 12px;
+  border: 0;
+  cursor: pointer;
+  color: var(--texto);
+  background: var(--painel);
+  box-shadow:
+    -4px 0 0 var(--linha),
+    4px 0 0 var(--linha),
+    0 -4px 0 var(--linha),
+    0 4px 0 var(--linha);
+  transition: transform 0.12s steps(2);
+}
+
+.idioma-btn:hover {
+  transform: translateY(-4px);
+}
+
+.idioma-btn.ativo {
+  color: var(--fundo);
+  background: var(--ouro);
+  box-shadow:
+    inset -4px -4px 0 #c98a00,
+    inset 4px 4px 0 #ffe98a,
+    -4px 0 0 var(--escuro),
+    4px 0 0 var(--escuro),
+    0 -4px 0 var(--escuro),
+    0 4px 0 var(--escuro);
+}
+
+@media (max-width: 800px) {
+  .header {
+    padding: 20px 16px 0;
+  }
+
+  .menu-link {
+    padding: 0 10px;
+    font-size: 10px;
+  }
+}

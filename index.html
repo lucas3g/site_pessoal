@@ -1,187 +1,492 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="lang-pt">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maktub - Desenvolvendo Soluções</title>
-  <meta name="description" content="Desenvolvedor Senior Fullstack">
-  <link rel="stylesheet" href="./css/style.min.css">
+  <title>Maktub - Senior Flutter Developer</title>
+  <meta name="description" content="Lucas Emanuel Silva — Senior Flutter Developer | Senior Mobile Software Engineer | Flutter & Dart | Android & iOS | Software Architecture | AI-Assisted Development">
+  <link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./css/pixel.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <script src="./js/idioma.js"></script>
 </head>
 
 <body>
-  <svg width="0" height="0" style="position:absolute">
+  <svg class="simbolos" aria-hidden="true">
     <defs>
-      <linearGradient id="grad-icon" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%" stop-color="#2DA1FF" />
-        <stop offset="100%" stop-color="#0C204D" />
-      </linearGradient>
+      <symbol id="moeda" viewBox="0 0 8 8">
+        <path fill="#FFD23F" d="M2 0h4v1h-4zM1 1h6v1h-6zM0 2h8v4h-8zM1 6h6v1h-6zM2 7h4v1h-4z" />
+        <path fill="#c98a00" d="M3 2h2v4h-2z" />
+        <path fill="#fff6c9" d="M1 2h1v2h-1z" />
+      </symbol>
+      <symbol id="coracao" viewBox="0 0 7 6">
+        <path d="M1 0h2v1h-2zM4 0h2v1h-2zM0 1h7v2h-7zM1 3h5v1h-5zM2 4h3v1h-3zM3 5h1v1h-1z" />
+      </symbol>
     </defs>
   </svg>
-  <header class="header">
-    <img src="./img/marca.svg" width="296" height="61" alt="Maktub" class="animar animar-esquerda">
-    <nav>
-      <ul class="header-menu">
-        <li class="animar"><a href="#experiencia">Experiência</a></li>
-        <li class="animar"><a href="#projetos">Projetos</a></li>
-        <li class="animar"><a href="#informacoes">Informações</a></li>
-        <li class="animar"><a href="#contato">Contato</a></li>
+
+  <div class="abertura" id="topo">
+    <div class="estrelas estrelas-1" aria-hidden="true"></div>
+    <div class="estrelas estrelas-2" aria-hidden="true"></div>
+    <div class="estrelas estrelas-3" aria-hidden="true"></div>
+    <div class="cadente" aria-hidden="true"></div>
+
+    <header class="header">
+      <a class="marca animar animar-esquerda" href="#topo" aria-label="Maktub">
+        <svg class="pixel" aria-hidden="true" viewBox="0 0 7 7" width="35" height="35">
+          <path fill="#E8F0FF" d="M0 0h1v7h-1zM1 1h1v1h-1zM2 2h1v1h-1zM3 3h1v1h-1zM4 2h1v1h-1zM5 1h1v1h-1zM6 0h1v4h-1z" />
+          <path fill="#2DA1FF" d="M6 5h1v2h-1zM5 6h1v1h-1z" />
+        </svg>
+        <span class="marca-nome">MAKTUB</span>
+      </a>
+      <nav aria-label="Seções">
+        <ul class="header-menu">
+          <li class="animar"><a class="menu-link" href="#experiencia"><span class="pt">Experiência</span><span class="en">Experience</span></a></li>
+          <li class="animar"><a class="menu-link" href="#projetos"><span class="pt">Projetos</span><span class="en">Projects</span></a></li>
+          <li class="animar"><a class="menu-link" href="#informacoes"><span class="pt">Informações</span><span class="en">Information</span></a></li>
+          <li class="animar"><a class="menu-link" href="#contato"><span class="pt">Contato</span><span class="en">Contact</span></a></li>
+        </ul>
+      </nav>
+      <div class="idioma animar animar-direita" role="group" aria-label="Idioma / Language">
+        <button type="button" class="idioma-btn ativo" data-idioma="pt" aria-pressed="true" aria-label="Português">PT</button>
+        <button type="button" class="idioma-btn" data-idioma="en" aria-pressed="false" aria-label="English">EN</button>
+      </div>
+    </header>
+
+    <main class="introducao">
+      <div class="introducao-texto">
+        <p class="rotulo animar"><span class="pt">JOGADOR 1 — PRONTO</span><span class="en">PLAYER 1 — READY</span></p>
+        <h1 class="animar">Senior<br>Flutter<br>Developer</h1>
+        <p class="introducao-cargo animar">Senior Mobile Software Engineer</p>
+        <ul class="etiquetas animar">
+          <li class="etiqueta">Flutter &amp; Dart</li>
+          <li class="etiqueta">Android &amp; iOS</li>
+          <li class="etiqueta">Software Architecture</li>
+          <li class="etiqueta">AI-Assisted Development (Claude Code, AI Agents, MCP)</li>
+        </ul>
+        <p class="introducao-resumo animar"><span class="pt">Lucas Emanuel Silva. Mais de 6 anos levando apps Flutter da arquitetura à publicação nas lojas.<br>Rio Grande do Sul, Brasil.</span><span class="en">Lucas Emanuel Silva. 6+ years taking Flutter apps from architecture to store release.<br>Rio Grande do Sul, Brazil.</span></p>
+        <p class="digitacao animar" aria-hidden="true">&gt; <span id="digitacao"></span><span class="cursor">_</span></p>
+        <div class="botoes animar">
+          <a class="botao" href="#experiencia">
+            <svg class="pixel" aria-hidden="true" viewBox="0 0 4 7" width="12" height="21">
+              <path fill="#0b1026" d="M0 0h1v7h-1zM1 1h1v5h-1zM2 2h1v3h-1zM3 3h1v1h-1z" />
+            </svg>
+            <span class="pt">INICIAR</span><span class="en">START</span>
+          </a>
+          <a class="botao botao-azul" href="#contato"><span class="pt">CONTATO</span><span class="en">CONTACT</span></a>
+        </div>
+      </div>
+
+      <div class="ficha-area animar animar-direita">
+        <div class="caixa ficha flutuante-1">
+          <div class="ficha-topo">
+            <span><span class="pt">FICHA</span><span class="en">PROFILE</span></span>
+            <span class="suave">P1</span>
+          </div>
+          <img src="./img/perfil.jpg" alt="Foto de Lucas Emanuel Silva" width="674" height="862" class="foto-perfil">
+          <div class="ficha-dados">
+            <div class="ficha-linha">
+              <span class="ficha-chave"><span class="pt">CLASSE</span><span class="en">CLASS</span></span>
+              <span class="ficha-valor">Flutter / Mobile</span>
+            </div>
+            <div class="ficha-linha">
+              <span class="ficha-chave">XP</span>
+              <span class="ficha-valor"><span class="pt">6+ anos</span><span class="en">6+ years</span></span>
+            </div>
+            <div class="ficha-linha">
+              <span class="ficha-chave">APPS</span>
+              <span class="ficha-valor"><span class="pt">8+ em produção</span><span class="en">8+ in production</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="cena">
+      <svg class="pixel cena-lua" aria-hidden="true" viewBox="0 0 10 10" width="80" height="80">
+        <path fill="#E8F0FF" d="M3 0h4v1h-4zM2 1h6v1h-6zM1 2h8v1h-8zM0 3h10v4h-10zM1 7h8v1h-8zM2 8h6v1h-6zM3 9h4v1h-4z" />
+        <path fill="#b9c7ea" d="M3 3h2v2h-2zM6 5h2v1h-2zM5 7h1v1h-1z" />
+      </svg>
+
+      <svg class="pixel cena-camada cena-montanhas" aria-hidden="true">
+        <defs>
+          <pattern id="padrao-montanhas" width="640" height="160" patternUnits="userSpaceOnUse">
+            <g transform="scale(8)">
+              <path fill="#1a2a63" d="M0 20V12h2v-2h2v-2h2v-2h2v-2h4v2h2v2h2v2h2v-1h2v-2h2v-2h2v-2h2v-1h4v2h2v2h2v2h2v2h2v2h2v2h4v-2h2v-2h2v-2h2v-1h4v1h2v2h2v-1h2v-2h2v-2h4v2h2v2h2v2h2v2h4v-1h4V20z" />
+              <path fill="#3b55a8" d="M8 4h4v1h-4zM26 2h4v1h-4zM24 3h2v1h-2zM62 5h4v1h-4zM50 7h4v1h-4z" />
+            </g>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#padrao-montanhas)" />
+      </svg>
+
+      <svg class="pixel cena-camada cena-cidade" aria-hidden="true">
+        <defs>
+          <pattern id="padrao-cidade" width="384" height="144" patternUnits="userSpaceOnUse">
+            <g transform="scale(6)">
+              <path fill="#0a1233" d="M0 10h8v14h-8zM9 4h7v20h-7zM17 12h6v12h-6zM24 7h9v17h-9zM34 14h5v10h-5zM40 2h8v22h-8zM43 0h1v2h-1zM49 9h7v15h-7zM57 13h6v11h-6z" />
+              <path fill="#FFD23F" d="M2 12h1v1h-1zM5 12h1v1h-1zM2 20h1v1h-1zM11 6h1v1h-1zM13 6h1v1h-1zM14 12h1v1h-1zM13 18h1v1h-1zM19 14h1v1h-1zM19 20h1v1h-1zM26 9h1v1h-1zM31 12h1v1h-1zM29 17h1v1h-1zM31 20h1v1h-1zM36 16h1v1h-1zM42 4h1v1h-1zM45 10h1v1h-1zM42 13h1v1h-1zM45 21h1v1h-1zM51 11h1v1h-1zM54 20h1v1h-1zM59 15h1v1h-1zM59 21h1v1h-1z" />
+              <path class="cena-janelas" fill="#7cc4ff" d="M2 15h1v1h-1zM5 17h1v1h-1zM11 9h1v1h-1zM11 15h1v1h-1zM11 21h1v1h-1zM21 17h1v1h-1zM29 9h1v1h-1zM26 14h1v1h-1zM26 20h1v1h-1zM36 20h1v1h-1zM45 4h1v1h-1zM42 7h1v1h-1zM45 16h1v1h-1zM42 19h1v1h-1zM54 14h1v1h-1zM51 17h1v1h-1zM61 18h1v1h-1z" />
+            </g>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#padrao-cidade)" />
+      </svg>
+
+      <svg class="pixel cena-camada cena-chao" aria-hidden="true">
+        <defs>
+          <pattern id="padrao-chao" width="128" height="48" patternUnits="userSpaceOnUse">
+            <g transform="scale(8)">
+              <path fill="#2DA1FF" d="M0 0h16v1h-16z" />
+              <path fill="#8fd0ff" d="M0 0h2v1h-2zM8 0h2v1h-2z" />
+              <path fill="#0f2a66" d="M0 1h16v5h-16z" />
+              <path fill="#1c479b" d="M2 2h2v1h-2zM9 3h3v1h-3zM5 4h1v1h-1zM13 2h1v1h-1zM0 4h2v1h-2z" />
+            </g>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#padrao-chao)" />
+      </svg>
+
+      <div class="cena-moeda" aria-hidden="true">
+        <div class="cena-moeda-some">
+          <svg class="pixel moeda-gira" width="40" height="40"><use href="#moeda" /></svg>
+        </div>
+      </div>
+      <div class="cena-mais" aria-hidden="true">+1</div>
+
+      <div class="cena-personagem" aria-hidden="true">
+        <div class="cena-personagem-quadro">
+          <svg class="pixel" viewBox="0 0 24 16" width="120" height="80">
+            <path fill="#2b1a12" d="M3 0h6v1h-6zM2 1h8v1h-8zM2 2h3v1h-3zM2 3h2v1h-2zM15 0h6v1h-6zM14 1h8v1h-8zM14 2h3v1h-3zM14 3h2v1h-2z" />
+            <path fill="#f2c08c" d="M5 2h5v1h-5zM4 3h6v1h-6zM3 4h7v1h-7zM4 5h5v1h-5zM17 2h5v1h-5zM16 3h6v1h-6zM15 4h7v1h-7zM16 5h5v1h-5z" />
+            <path fill="#0b1026" d="M8 3h1v1h-1zM20 3h1v1h-1z" />
+            <path fill="#2DA1FF" d="M3 6h6v1h-6zM2 7h8v2h-8zM3 9h6v2h-6zM15 6h6v1h-6zM14 7h8v2h-8zM15 9h6v2h-6z" />
+            <path fill="#f2c08c" d="M1 9h1v1h-1zM10 8h1v1h-1zM15 10h1v1h-1zM20 10h1v1h-1z" />
+            <path fill="#4a63b8" d="M3 11h6v2h-6zM3 13h2v1h-2zM7 13h2v1h-2zM2 14h2v1h-2zM8 14h2v1h-2zM15 11h6v2h-6zM16 13h4v2h-4z" />
+            <path fill="#E8F0FF" d="M1 15h3v1h-3zM8 15h3v1h-3zM16 15h5v1h-5z" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="placar">
+        <span><span class="pt">MOEDAS</span><span class="en">COINS</span> x<span id="moedasTotal">00</span></span>
+        <button type="button" class="placar-moeda" id="moedaBtn" aria-label="Coletar moeda">
+          <svg class="pixel" aria-hidden="true" width="40" height="40"><use href="#moeda" /></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="letreiro" aria-hidden="true">
+    <div class="letreiro-trilho">
+      <ul>
+        <li>DART</li><li>JAVA</li><li>KOTLIN</li><li>TYPESCRIPT</li><li>SQL</li><li>PHP</li><li>FLUTTER</li><li>SPRING BOOT</li><li>NESTJS</li><li>POSTGRESQL</li><li>MONGODB</li><li>FIREBASE</li>
       </ul>
-    </nav>
-  </header>
-  <main class="container introducao">
-    <img src="./img/perfil.jpg" alt="dono do site" width="366.64" height="468.92" class="foto-perfil animar animar-esquerda">
-    <div>
-      <h1 class="animar animar-direita">Desenvolvedor<br>Senior<br>Fullstac<img src="./img/k-com-detalhe.svg" alt="k" class="k-svg">
-      </h1>
-      <p class="animar animar-direita">Lucas Emanuel Silva.<br>Localizado no Rio Grande do Sul.</p>
+      <ul>
+        <li>DART</li><li>JAVA</li><li>KOTLIN</li><li>TYPESCRIPT</li><li>SQL</li><li>PHP</li><li>FLUTTER</li><li>SPRING BOOT</li><li>NESTJS</li><li>POSTGRESQL</li><li>MONGODB</li><li>FIREBASE</li>
+      </ul>
     </div>
-  </main>
-  <section class="container experiencia" id="experiencia" aria-label="Experiência">
-    <h2 class="subtitulo animar animar-esquerda">Experiência</h2>
-    <div>
-      <p class="experiencia-texto animar">Engenheiro de Software com mais de 6 anos de experiência desenvolvimento de aplicações móveis e web escaláveis. Forte atuação com <strong>Flutter</strong>, integração <strong>backend</strong>, sistemas em tempo real e soluções multiplataforma. Experiência na entrega de aplicativos para <strong>Google Play Store</strong> e <strong>Apple App Store</strong>, aplicando <strong>Clean Architecture</strong>, <strong>Clean Code</strong>, princípios <strong>SOLID</strong>, <strong>CI/CD</strong> e desenvolvimento de pacotes <strong>open-source</strong>.</p>
+  </div>
 
-      <div class="empresa animar">
-        <span class="empresa-ano">2018 – Presente</span>
-        <h3 class="empresa-titulo">EL Sistemas Ltda</h3>
-        <span class="empresa-titulo">Desenvolvedor Senior</span>
-        <p class="animar">Liderei o desenvolvimento e manutenção de mais de 8 aplicativos em produção publicados na Google Play Store e Apple App Store. Desenvolvi soluções mobile em Flutter com Clean Architecture e Clean Code, incluindo integrações com sistemas ERP (estoque, financeiro, logística e transporte) e aplicativos white-label de cashback para postos e supermercados. Implementei pipelines de CI/CD com CodeMagic para automação de deploy e utilizei Firebase para autenticação, notificações, analytics, monitoramento de falhas e configuração remota.</p>
-        <ul class="empresa-habilidades">
-          <li class="animar">Flutter</li>
-          <li class="animar">Firebase</li>
-          <li class="animar">CI/CD</li>
-          <li class="animar">Mobile Development</li>
-          <li class="animar">Clean Architecture</li>
+  <section class="secao experiencia" id="experiencia" aria-label="Experiência">
+    <div class="secao-container">
+      <div class="secao-titulo animar animar-esquerda">
+        <p class="rotulo"><span class="pt">FASE 01</span><span class="en">LEVEL 01</span></p>
+        <h2 class="subtitulo"><span class="pt">Experiência</span><span class="en">Experience</span></h2>
+      </div>
+
+      <div class="experiencia-grade">
+        <div class="animar">
+          <div class="caixa dialogo">
+            <div class="dialogo-topo">
+              <div class="dialogo-avatar">
+                <svg class="pixel" aria-hidden="true" viewBox="0 0 12 16" width="42" height="56">
+                  <path fill="#2b1a12" d="M3 0h6v1h-6zM2 1h8v1h-8zM2 2h3v1h-3zM2 3h2v1h-2z" />
+                  <path fill="#f2c08c" d="M5 2h5v1h-5zM4 3h6v1h-6zM3 4h7v1h-7zM4 5h5v1h-5zM1 9h1v1h-1zM10 8h1v1h-1z" />
+                  <path fill="#0b1026" d="M8 3h1v1h-1z" />
+                  <path fill="#2DA1FF" d="M3 6h6v1h-6zM2 7h8v2h-8zM3 9h6v2h-6z" />
+                  <path fill="#4a63b8" d="M3 11h6v2h-6zM3 13h2v2h-2zM7 13h2v2h-2z" />
+                  <path fill="#E8F0FF" d="M2 15h3v1h-3zM7 15h3v1h-3z" />
+                </svg>
+              </div>
+              <span class="dialogo-nome">LUCAS</span>
+            </div>
+            <p class="experiencia-texto"><span class="pt">Engenheiro de Software Senior com mais de 6 anos entregando aplicações móveis e web escaláveis. Assumo o ciclo completo: defino a <strong>arquitetura</strong>, tomo as decisões técnicas, integro <strong>backend</strong> e sistemas em tempo real e levo o produto até a <strong>Google Play Store</strong> e a <strong>Apple App Store</strong>. Trabalho com <strong>Clean Architecture</strong>, <strong>SOLID</strong>, testes e <strong>CI/CD</strong> para manter a base de código sustentável, publico pacotes <strong>open-source</strong> e uso <strong>desenvolvimento assistido por IA</strong> (Claude Code, AI Agents, MCP) para acelerar entregas sem abrir mão da qualidade.</span><span class="en">Senior Software Engineer with 6+ years shipping scalable mobile and web applications. I own the full cycle: I define the <strong>architecture</strong>, make the technical calls, integrate <strong>backend</strong> and real-time systems, and take the product all the way to the <strong>Google Play Store</strong> and the <strong>Apple App Store</strong>. I work with <strong>Clean Architecture</strong>, <strong>SOLID</strong>, testing and <strong>CI/CD</strong> to keep the codebase sustainable, publish <strong>open-source</strong> packages, and use <strong>AI-assisted development</strong> (Claude Code, AI Agents, MCP) to ship faster without giving up quality.</span></p>
+            <svg class="pixel cursor dialogo-seta" aria-hidden="true" viewBox="0 0 7 4" width="21" height="12">
+              <path fill="#FFD23F" d="M0 0h7v1h-7zM1 1h5v1h-5zM2 2h3v1h-3zM3 3h1v1h-1z" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="animar">
+          <div class="caixa caixa-dourada empresa">
+            <div class="empresa-topo">
+              <span class="empresa-missao"><span class="pt">MISSÃO PRINCIPAL</span><span class="en">MAIN QUEST</span></span>
+              <span class="selo empresa-ano"><span class="pt">2018 – Presente</span><span class="en">2018 – Present</span></span>
+            </div>
+            <h3 class="empresa-titulo">EL Sistemas Ltda</h3>
+            <p class="empresa-cargo"><span class="pt">Desenvolvedor Senior</span><span class="en">Senior Developer</span></p>
+            <ul class="empresa-feitos pt">
+              <li>Liderei o desenvolvimento e a manutenção de mais de 8 aplicativos em produção na Google Play Store e na Apple App Store.</li>
+              <li>Defini a arquitetura mobile em Flutter com Clean Architecture e Clean Code, mantendo o código testável e fácil de evoluir.</li>
+              <li>Projetei integrações com sistemas ERP (estoque, financeiro, logística e transporte) e aplicativos white-label de cashback para postos e supermercados.</li>
+              <li>Automatizei o deploy com pipelines de CI/CD no CodeMagic.</li>
+              <li>Estruturei autenticação, notificações, analytics, monitoramento de falhas e configuração remota com Firebase.</li>
+            </ul>
+            <ul class="empresa-feitos en">
+              <li>Led the development and maintenance of 8+ production apps on the Google Play Store and the Apple App Store.</li>
+              <li>Defined the Flutter mobile architecture with Clean Architecture and Clean Code, keeping the code testable and easy to evolve.</li>
+              <li>Designed integrations with ERP systems (inventory, finance, logistics and transportation) and white-label cashback apps for gas stations and supermarkets.</li>
+              <li>Automated deployment with CI/CD pipelines on CodeMagic.</li>
+              <li>Set up authentication, notifications, analytics, crash monitoring and remote config with Firebase.</li>
+            </ul>
+            <ul class="etiquetas empresa-habilidades">
+              <li class="etiqueta">Flutter</li>
+              <li class="etiqueta">Firebase</li>
+              <li class="etiqueta">CI/CD</li>
+              <li class="etiqueta">Mobile Development</li>
+              <li class="etiqueta">Clean Architecture</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="atuacao">
+        <p class="rotulo animar animar-esquerda"><span class="pt">COMO ATUO NO DIA A DIA</span><span class="en">HOW I WORK DAY TO DAY</span></p>
+        <ul class="atuacao-lista">
+          <li class="animar">
+            <div class="caixa atuacao-item">
+              <span class="atuacao-numero">01</span>
+              <h3><span class="pt">Arquitetura</span><span class="en">Architecture</span></h3>
+              <p><span class="pt">Decido a estrutura do app, as camadas e os padrões antes da primeira tela, pensando em escala e manutenção.</span><span class="en">I decide the app structure, layers and patterns before the first screen, with scale and maintenance in mind.</span></p>
+            </div>
+          </li>
+          <li class="animar">
+            <div class="caixa atuacao-item">
+              <span class="atuacao-numero">02</span>
+              <h3><span class="pt">Liderança técnica</span><span class="en">Technical leadership</span></h3>
+              <p><span class="pt">Conduzo entregas de ponta a ponta, quebro problemas grandes em etapas e faço code review para manter o padrão.</span><span class="en">I drive deliveries end to end, break large problems into steps and review code to keep the standard high.</span></p>
+            </div>
+          </li>
+          <li class="animar">
+            <div class="caixa atuacao-item">
+              <span class="atuacao-numero">03</span>
+              <h3><span class="pt">Qualidade e release</span><span class="en">Quality &amp; release</span></h3>
+              <p><span class="pt">Testes de widget e E2E, CI/CD e monitoramento em produção para publicar com segurança.</span><span class="en">Widget and E2E testing, CI/CD and production monitoring to ship with confidence.</span></p>
+            </div>
+          </li>
+          <li class="animar">
+            <div class="caixa caixa-dourada atuacao-item">
+              <span class="atuacao-numero">04</span>
+              <h3><span class="pt">IA no fluxo</span><span class="en">AI in the workflow</span></h3>
+              <p><span class="pt">Uso Claude Code, AI Agents e MCP para acelerar o desenvolvimento, revisando e respondendo por tudo que vai para produção.</span><span class="en">I use Claude Code, AI Agents and MCP to speed up development, reviewing and owning everything that reaches production.</span></p>
+            </div>
+          </li>
         </ul>
       </div>
-
     </div>
   </section>
 
-  <section class="projetos" id="projetos" aria-label="Projetos">
-    <div class="projetos-container">
-      <h2 class="subtitulo animar animar-esquerda">Projetos</h2>
-      <div>
-        <p class="projetos-texto animar">
-          Desenvolvi outros aplicativos como <strong>PriceMy</strong> e <strong>Cube Timer</strong>, atuando em contextos como inteligência artificial, educação ambiental, gestão de tempo e aplicativos com usuários ativos na Google Play Store. Esses projetos demonstram versatilidade técnica, uso de <strong>Flutter</strong> e <strong>Firebase</strong>, integrações com IA, arquiteturas em nuvem e boas práticas de desenvolvimento.<br>Abaixo estão os dois projetos com maior destaque e impacto técnico.
-        </p>
-
-        <ul class="app-lista">
-          <li class="lista flutuante-1">
-            <h3>
-              <a class="app-titulo" href="//" target="_blank">Padel Match Management App</a>
-            </h3>
-            <p class="app-texto">Projeto pessoal de gestão de partidas de padel em tempo real, responsável por controle de pontuação, partidas e atualizações ao vivo.</p>
-          </li>
-          <li class="lista flutuante-2">
-            <h3>
-              <a class="app-titulo" href="https://pub.dev/packages/easy_blue_printer" target="_blank">Easy Blue Printer</a>
-            </h3>
-            <p class="app-texto">Projeto open source desenvolvido como pacote Flutter para conexão e impressão via Bluetooth em Android e iOS.</p>
-          </li>
-        </ul>
+  <section class="secao projetos" id="projetos" aria-label="Projetos">
+    <div class="secao-container">
+      <div class="secao-titulo animar animar-esquerda">
+        <p class="rotulo"><span class="pt">FASE 02</span><span class="en">LEVEL 02</span></p>
+        <h2 class="subtitulo"><span class="pt">Projetos</span><span class="en">Projects</span></h2>
       </div>
-    </div>
-  </section>
-  <section class="informacoes" id="informacoes" aria-label="Informações">
-    <div class="informacoes-container">
-      <h2 class="subtitulo animar animar-esquerda">Informações</h2>
-      <div class="formacao">
-        <div class="cursos animar">
-          <h3>Cursos Intensivos</h3>
-          <ul>
-            <li class="animar">
-              <span>Flutter iniciante<span class="plataforma">/ Flutterando</span></span>
-              <span>60h</span>
-            </li>
-            <li class="animar">
-              <span>Flutter avançado<span class="plataforma">/ Rockeatseat</span></span>
-              <span>100h</span>
-            </li>
-          </ul>
-        </div>
-        <div class="habilidades animar">
-          <h3>Habilidades técnicas</h3>
-          <ul>
-            <li class="animar"><span>Linguagens</span> <span>Dart, Java, Kotlin, JavaScript/TypeScript, SQL, PHP</span></li>
-            <li class="animar"><span>Frameworks</span> <span>Flutter, Spring Boot, NestJS</span></li>
-            <li class="animar"><span>Databases</span> <span>Firebird, PostgreSQL, MongoDB</span></li>
-            <li class="animar"><span>Real-time & Messaging</span> <span>WebSockets, FCM, Bluetooth</span></li>
-            <li class="animar"><span>Cloud & Services</span> <span>Firebase, GCP, Railway</span></li>
-            <li class="animar"><span>Práticas</span> <span>Clean Code and Architecture, Widget and E2E Testing</span></li>
-            <li class="animar"><span>CI/CD & DevOps</span> <span>CodeMagic for automated app deployments</span></li>
-            <li class="animar"><span>Version Control</span> <span>Git, GitHub, GitLab</span></li>
-          </ul>
-        </div>
-        <div class="idiomas animar">
-          <h3>Idiomas</h3>
-          <ul>
-            <li class="animar">Português <span>/ Nativo</span></li>
-            <li class="animar">Inglês <span>/ Intermediário</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  <footer class="footer" id="contato">
-    <div class="footer-container">
-      <p class="footer-texto animar animar-esquerda">Disponível para oportunidades como Desenvolvedor Fullstack.<br>Entre em contato para conversarmos sobre como posso gerar impacto no seu projeto.</p>
-      <ul class="footer-contato">
-        <li class="animar">lucassilva080397@gmail.com</li>
-        <li class="animar">
-          <div class="footer-icons">
-            <a href="https://wa.me/5554999727330" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path d="M414.73 97.1A222.14 222.14 0 00256.94 32C134 32 33.92 131.58 33.87 254a220.61 220.61 0 0029.78 111L32 480l118.25-30.87a223.63 223.63 0 00106.6 27h.09c122.93 0 223-99.59 223.06-222A220.18 220.18 0 00414.73 97.1zM256.94 438.66h-.08a185.75 185.75 0 01-94.36-25.72l-6.77-4-70.17 18.32 18.73-68.09-4.41-7A183.46 183.46 0 0171.53 254c0-101.73 83.21-184.5 185.48-184.5a185 185 0 01185.33 184.64c-.04 101.74-83.21 184.52-185.4 184.52zm101.69-138.19c-5.57-2.78-33-16.2-38.08-18.05s-8.83-2.78-12.54 2.78-14.4 18-17.65 21.75-6.5 4.16-12.07 1.38-23.54-8.63-44.83-27.53c-16.57-14.71-27.75-32.87-31-38.42s-.35-8.56 2.44-11.32c2.51-2.49 5.57-6.48 8.36-9.72s3.72-5.56 5.57-9.26.93-6.94-.46-9.71-12.54-30.08-17.18-41.19c-4.53-10.82-9.12-9.35-12.54-9.52-3.25-.16-7-.2-10.69-.2a20.53 20.53 0 00-14.86 6.94c-5.11 5.56-19.51 19-19.51 46.28s20 53.68 22.76 57.38 39.3 59.73 95.21 83.76a323.11 323.11 0 0031.78 11.68c13.35 4.22 25.5 3.63 35.1 2.2 10.71-1.59 33-13.42 37.63-26.38s4.64-24.06 3.25-26.37-5.11-3.71-10.69-6.48z" fill-rule="evenodd" />
-              </svg>
-            </a>
-            <a href="https://www.linkedin.com/in/lucas3g/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path d="M444.17 32H70.28C49.85 32 32 46.7 32 66.89v374.72C32 461.91 49.85 480 70.28 480h373.78c20.54 0 35.94-18.21 35.94-38.39V66.89C480.12 46.7 464.6 32 444.17 32zm-273.3 373.43h-64.18V205.88h64.18zM141 175.54h-.46c-20.54 0-33.84-15.29-33.84-34.43 0-19.49 13.65-34.42 34.65-34.42s33.85 14.82 34.31 34.42c-.01 19.14-13.31 34.43-34.66 34.43zm264.43 229.89h-64.18V296.32c0-26.14-9.34-44-32.56-44-17.74 0-28.24 12-32.91 23.69-1.75 4.2-2.22 9.92-2.22 15.76v113.66h-64.18V205.88h64.18v27.77c9.34-13.3 23.93-32.44 57.88-32.44 42.13 0 74 27.77 74 87.64z" />
-              </svg>
-            </a>
-            <a href="https://github.com/lucas3g" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path d="M256 32C132.3 32 32 134.9 32 261.7c0 101.5 64.2 187.5 153.2 217.9a17.56 17.56 0 003.8.4c8.3 0 11.5-6.1 11.5-11.4 0-5.5-.2-19.9-.3-39.1a102.4 102.4 0 01-22.6 2.7c-43.1 0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1 1.4-14.1h.1c22.5 2 34.3 23.8 34.3 23.8 11.2 19.6 26.2 25.1 39.6 25.1a63 63 0 0025.6-6c2-14.8 7.8-24.9 14.2-30.7-49.7-5.8-102-25.5-102-113.5 0-25.1 8.7-45.6 23-61.6-2.3-5.8-10-29.2 2.2-60.8a18.64 18.64 0 015-.5c8.1 0 26.4 3.1 56.6 24.1a208.21 208.21 0 01112.2 0c30.2-21 48.5-24.1 56.6-24.1a18.64 18.64 0 015 .5c12.2 31.6 4.5 55 2.2 60.8 14.3 16.1 23 36.6 23 61.6 0 88.2-52.4 107.6-102.3 113.3 8 7.1 15.2 21.1 15.2 42.5 0 30.7-.3 55.5-.3 63 0 5.4 3.1 11.5 11.4 11.5a19.35 19.35 0 004-.4C415.9 449.2 480 363.1 480 261.7 480 134.9 379.7 32 256 32z" />
-              </svg>
-            </a>
+
+      <p class="projetos-texto animar"><span class="pt">Também criei aplicativos como <strong>PriceMy</strong> e <strong>Cube Timer</strong>, atuando em contextos como inteligência artificial, educação ambiental, gestão de tempo e aplicativos com usuários ativos na Google Play Store. Esses projetos demonstram versatilidade técnica, uso de <strong>Flutter</strong> e <strong>Firebase</strong>, integrações com IA, arquiteturas em nuvem e boas práticas de desenvolvimento.<br>Abaixo estão os dois projetos com maior destaque e impacto técnico.</span><span class="en">I have also built apps such as <strong>PriceMy</strong> and <strong>Cube Timer</strong>, working across artificial intelligence, environmental education, time management and apps with active users on the Google Play Store. These projects show technical range, use of <strong>Flutter</strong> and <strong>Firebase</strong>, AI integrations, cloud architectures and solid engineering practices.<br>Below are the two projects with the greatest visibility and technical impact.</span></p>
+
+      <ul class="app-lista">
+        <li class="animar animar-zoom">
+          <div class="flutuante-1">
+            <div class="caixa cartucho">
+              <div class="cartucho-faixa">
+                <span><span class="pt">CARTUCHO 01</span><span class="en">CARTRIDGE 01</span></span>
+                <span><span class="pt">PROJETO PESSOAL</span><span class="en">PERSONAL PROJECT</span></span>
+              </div>
+              <div class="cartucho-corpo">
+                <div class="cartucho-icone">
+                  <svg class="pixel" aria-hidden="true" viewBox="0 0 16 16" width="80" height="80">
+                    <path fill="#2DA1FF" d="M4 1h6v1h-6zM3 2h8v1h-8zM2 3h10v5h-10zM3 8h8v1h-8zM4 9h6v1h-6zM6 10h2v1h-2z" />
+                    <path fill="#0b1026" d="M4 4h1v1h-1zM6 4h1v1h-1zM8 4h1v1h-1zM5 6h1v1h-1zM7 6h1v1h-1zM9 6h1v1h-1z" />
+                    <path fill="#E8F0FF" d="M6 11h2v4h-2z" />
+                    <path fill="#FFD23F" d="M12 12h3v1h-3zM13 11h1v3h-1z" />
+                  </svg>
+                </div>
+                <h3 class="app-titulo">Padel Match Management App</h3>
+                <p class="app-texto"><span class="pt">Projeto pessoal de gestão de partidas de padel em tempo real. Concebi o produto, a arquitetura e a sincronização ao vivo de pontuação e partidas.</span><span class="en">Personal project for real-time padel match management. I designed the product, the architecture and the live sync of scores and matches.</span></p>
+                <div class="botoes">
+                  <a class="botao" href="https://play.google.com/store/apps/details?id=com.maktub.padelmatch" target="_blank" rel="noopener noreferrer" aria-label="Padel Match no Google Play">GOOGLE PLAY</a>
+                  <a class="botao botao-azul" href="https://apps.apple.com/us/app/padel-match/id6758677332" target="_blank" rel="noopener noreferrer" aria-label="Padel Match na App Store">APP STORE</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="animar animar-zoom">
+          <div class="flutuante-2">
+            <div class="caixa caixa-dourada cartucho">
+              <div class="cartucho-faixa">
+                <span><span class="pt">CARTUCHO 02</span><span class="en">CARTRIDGE 02</span></span>
+                <span>OPEN SOURCE</span>
+              </div>
+              <div class="cartucho-corpo">
+                <div class="cartucho-icone">
+                  <svg class="pixel" aria-hidden="true" viewBox="0 0 16 16" width="80" height="80">
+                    <path fill="#E8F0FF" d="M4 1h8v4h-8zM4 10h8v5h-8z" />
+                    <path fill="#2DA1FF" d="M1 5h14v7h-3v-2h-8v2h-3z" />
+                    <path fill="#0b1026" d="M3 9h10v1h-10z" />
+                    <path fill="#FFD23F" d="M12 6h2v1h-2z" />
+                    <path fill="#7a8bb8" d="M5 12h6v1h-6zM5 14h4v1h-4z" />
+                  </svg>
+                </div>
+                <h3 class="app-titulo">Easy Blue Printer</h3>
+                <p class="app-texto"><span class="pt">Pacote Flutter open source, publicado no pub.dev, para conexão e impressão via Bluetooth em Android e iOS. Projetei a API pública e mantenho o pacote.</span><span class="en">Open-source Flutter package, published on pub.dev, for Bluetooth connection and printing on Android and iOS. I designed the public API and maintain the package.</span></p>
+                <div class="botoes">
+                  <a class="botao" href="https://pub.dev/packages/easy_blue_printer" target="_blank" rel="noopener noreferrer"><span class="pt">VER NO PUB.DEV</span><span class="en">VIEW ON PUB.DEV</span></a>
+                </div>
+              </div>
+            </div>
           </div>
         </li>
       </ul>
+    </div>
+  </section>
+
+  <section class="secao informacoes" id="informacoes" aria-label="Informações">
+    <div class="secao-container">
+      <div class="secao-titulo animar animar-esquerda">
+        <p class="rotulo"><span class="pt">FASE 03</span><span class="en">LEVEL 03</span></p>
+        <h2 class="subtitulo"><span class="pt">Informações</span><span class="en">Information</span></h2>
+      </div>
+
+      <div class="formacao">
+        <div class="formacao-coluna">
+          <div class="animar">
+            <div class="caixa cursos">
+              <div class="formacao-topo">
+                <svg class="pixel" aria-hidden="true" viewBox="0 0 8 8" width="32" height="32">
+                  <path fill="#2DA1FF" d="M1 1h6v6h-6z" />
+                  <path fill="#E8F0FF" d="M2 2h4v1h-4zM1 6h6v1h-6z" />
+                  <path fill="#FFD23F" d="M5 3h1v3h-1z" />
+                </svg>
+                <h3 class="caixa-titulo"><span class="pt">Cursos Intensivos</span><span class="en">Intensive Courses</span></h3>
+              </div>
+              <ul>
+                <li class="linha linha-entre">
+                  <span><span class="pt">Flutter iniciante</span><span class="en">Flutter beginner</span> <span class="suave plataforma">/ Flutterando</span></span>
+                  <span class="selo">60h</span>
+                </li>
+                <li class="linha linha-entre">
+                  <span><span class="pt">Flutter avançado</span><span class="en">Advanced Flutter</span> <span class="suave plataforma">/ Rockeatseat</span></span>
+                  <span class="selo">100h</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="animar">
+            <div class="caixa idiomas">
+              <div class="formacao-topo">
+                <svg class="pixel" aria-hidden="true" viewBox="0 0 8 8" width="32" height="32">
+                  <path fill="#2DA1FF" d="M1 1h6v4h-6zM2 5h2v1h-2zM2 6h1v1h-1z" />
+                  <path fill="#E8F0FF" d="M2 2h4v1h-4zM2 3h3v1h-3z" />
+                </svg>
+                <h3 class="caixa-titulo"><span class="pt">Idiomas</span><span class="en">Languages</span></h3>
+              </div>
+              <ul>
+                <li class="linha linha-entre">
+                  <span><span class="pt">Português</span><span class="en">Portuguese</span> <span class="suave">/ <span class="pt">Nativo</span><span class="en">Native</span></span></span>
+                  <span class="coracoes" aria-hidden="true">
+                    <svg class="pixel coracao cheio"><use href="#coracao" /></svg>
+                    <svg class="pixel coracao cheio"><use href="#coracao" /></svg>
+                    <svg class="pixel coracao cheio"><use href="#coracao" /></svg>
+                    <svg class="pixel coracao cheio"><use href="#coracao" /></svg>
+                    <svg class="pixel coracao cheio"><use href="#coracao" /></svg>
+                  </span>
+                </li>
+                <li class="linha linha-entre">
+                  <span><span class="pt">Inglês</span><span class="en">English</span> <span class="suave">/ <span class="pt">Intermediário</span><span class="en">Intermediate</span></span></span>
+                  <span class="coracoes" aria-hidden="true">
+                    <svg class="pixel coracao cheio"><use href="#coracao" /></svg>
+                    <svg class="pixel coracao cheio"><use href="#coracao" /></svg>
+                    <svg class="pixel coracao cheio"><use href="#coracao" /></svg>
+                    <svg class="pixel coracao"><use href="#coracao" /></svg>
+                    <svg class="pixel coracao"><use href="#coracao" /></svg>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="formacao-habilidades animar animar-direita">
+          <div class="caixa caixa-dourada habilidades">
+            <div class="formacao-topo">
+              <svg class="pixel" aria-hidden="true" viewBox="0 0 8 8" width="32" height="32">
+                <path fill="#E8F0FF" d="M6 0h2v2h-1v1h-1v1h-1v1h-1v-1h1v-1h1v-1h1z" />
+                <path fill="#FFD23F" d="M2 3h1v1h1v1h1v1h-1v-1h-1v-1h-1zM3 5h1v1h-1zM2 6h1v1h-1z" />
+                <path fill="#2DA1FF" d="M0 7h2v1h-2zM1 6h1v1h-1z" />
+              </svg>
+              <h3 class="caixa-titulo"><span class="pt">Habilidades técnicas</span><span class="en">Technical skills</span></h3>
+            </div>
+            <ul>
+              <li class="linha"><span class="habilidades-chave"><span class="pt">Linguagens</span><span class="en">Languages</span></span> <span class="habilidades-valor">Dart, Java, Kotlin, JavaScript/TypeScript, SQL, PHP</span></li>
+              <li class="linha"><span class="habilidades-chave">Frameworks</span> <span class="habilidades-valor">Flutter, Spring Boot, NestJS</span></li>
+              <li class="linha"><span class="habilidades-chave">Databases</span> <span class="habilidades-valor">Firebird, PostgreSQL, MongoDB</span></li>
+              <li class="linha"><span class="habilidades-chave">Real-time &amp; Messaging</span> <span class="habilidades-valor">WebSockets, FCM, Bluetooth</span></li>
+              <li class="linha"><span class="habilidades-chave">Cloud &amp; Services</span> <span class="habilidades-valor">Firebase, GCP, Railway</span></li>
+              <li class="linha"><span class="habilidades-chave"><span class="pt">Práticas</span><span class="en">Practices</span></span> <span class="habilidades-valor">Clean Code and Architecture, Widget and E2E Testing</span></li>
+              <li class="linha"><span class="habilidades-chave">CI/CD &amp; DevOps</span> <span class="habilidades-valor">CodeMagic for automated app deployments</span></li>
+              <li class="linha"><span class="habilidades-chave">Version Control</span> <span class="habilidades-valor">Git, GitHub, GitLab</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" id="contato">
+    <div class="estrelas footer-estrelas" aria-hidden="true"></div>
+    <div class="footer-container">
+      <div class="footer-caixa-area animar animar-zoom">
+        <div class="caixa footer-caixa">
+          <svg class="pixel moeda-gira" aria-hidden="true" width="56" height="56"><use href="#moeda" /></svg>
+          <p class="rotulo"><span class="pt">FASE FINAL</span><span class="en">FINAL LEVEL</span> <span class="cursor">_</span></p>
+          <h2 class="subtitulo footer-titulo"><span class="pt">Contato</span><span class="en">Contact</span></h2>
+          <p class="footer-texto"><span class="pt">Disponível para oportunidades como Senior Flutter Developer e Senior Mobile Software Engineer.<br>Entre em contato para conversarmos sobre como posso gerar impacto no seu projeto.</span><span class="en">Available for Senior Flutter Developer and Senior Mobile Software Engineer opportunities.<br>Get in touch and let's talk about how I can make an impact on your project.</span></p>
+          <a class="footer-email" href="mailto:lucassilva080397@gmail.com">lucassilva080397@gmail.com</a>
+          <ul class="footer-contato">
+            <li><a class="botao" href="https://wa.me/5554999727330" target="_blank" rel="noopener noreferrer">WHATSAPP</a></li>
+            <li><a class="botao botao-azul" href="https://www.linkedin.com/in/lucas3g/" target="_blank" rel="noopener noreferrer">LINKEDIN</a></li>
+            <li><a class="botao botao-contorno" href="https://github.com/lucas3g" target="_blank" rel="noopener noreferrer">GITHUB</a></li>
+          </ul>
+        </div>
+      </div>
+
       <div class="footer-legal">
-        <p class="footer-copy animar animar-esquerda">Maktub. Alguns direitos reservados.</p>
-        <a href="./terms.html" class="footer-privacidade animar">
-          <svg viewBox="0 0 512 512" aria-hidden="true" focusable="false">
-            <path d="M320 32H128c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h256c26.5 0 48-21.5 48-48V144L320 32zm-8 136V72l104 104h-96c-4.4 0-8-3.6-8-8zM160 240h192v32H160v-32zm0 80h192v32H160v-32zm0 80h128v32H160v-32z" />
-          </svg>
-          Termos de Uso
-        </a>
-        <a href="./privacy.html" class="footer-privacidade animar animar-direita">
-          <svg viewBox="0 0 512 512" aria-hidden="true" focusable="false">
-            <path d="M256 32L96 96v128c0 97.2 68.3 188.2 160 224 91.7-35.8 160-126.8 160-224V96L256 32zm0 240h124.7c-9.4 71.9-58.5 137-124.7 163.5V272H131.3C122 216.9 128 152.6 128 133.4L256 80v192z" />
-          </svg>
-          Política de Privacidade
-        </a>
+        <p class="footer-copy animar animar-esquerda"><span class="pt">Maktub. Alguns direitos reservados.</span><span class="en">Maktub. Some rights reserved.</span></p>
+        <div class="footer-links animar animar-direita">
+          <a href="./terms.html" class="menu-link"><span class="pt">Termos de Uso</span><span class="en">Terms of Use</span></a>
+          <a href="./privacy.html" class="menu-link"><span class="pt">Política de Privacidade</span><span class="en">Privacy Policy</span></a>
+        </div>
       </div>
     </div>
   </footer>
-  <script src="./js/scroll-animations.js"></script>
-  <script src="./js/back-to-top.js"></script>
+
   <button id="backToTopBtn" class="back-to-top-btn" type="button" aria-label="Voltar ao topo">
-    <svg viewBox="0 0 512 512" aria-hidden="true" focusable="false">
-      <defs>
-        <linearGradient id="backToTopGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.92" />
-          <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.72" />
-        </linearGradient>
-      </defs>
-      <path fill="url(#backToTopGradient)" d="M256 50.7c-113.6 0-205.7 92.1-205.7 205.7S142.4 462.1 256 462.1 461.7 369.9 461.7 256 369.6 50.7 256 50.7zm75.7 216.8l-55.7-55.7V331c0 13.3-10.7 24-24 24s-24-10.7-24-24V211.8l-55.7 55.7c-9.4 9.4-24.6 9.4-34 0-9.4-9.4-9.4-24.6 0-34l96-96c9.4-9.4 24.6-9.4 34 0l96 96c9.4 9.4 9.4 24.6 0 34-9.4 9.4-24.6 9.4-34 0z" />
+    <svg class="pixel" viewBox="0 0 7 8" aria-hidden="true" focusable="false">
+      <path d="M3 0h1v1h-1zM2 1h3v1h-3zM1 2h5v1h-5zM0 3h7v1h-7zM2 4h3v4h-3z" />
     </svg>
   </button>
+
+  <script src="./js/scroll-animations.js"></script>
+  <script src="./js/back-to-top.js"></script>
+  <script src="./js/digitacao.js"></script>
+  <script src="./js/moedas.js"></script>
 </body>
 
 </html>
